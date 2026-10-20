@@ -1,4 +1,10 @@
 package com.practical.inventoryapplication.entity;
 
-public record Item(String item_id, String item_name, double item_price) {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "item")
+public record Item(@Id long item_id, String item_name, double item_price) {
 }
